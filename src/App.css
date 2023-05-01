@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Song+Myung&display=swap");
+body {
+  background-color: white;
+  /* body를 기준으로 가운데 */
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  margin: 0;
+}
+
+#root {
+  background-color: cornflowerblue;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 8px 24px 0px;
+}
+
+.App {
+  min-height: 100vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+  height: 30%;
+}
+
+body::-webkit-scrollbar-thumb {
+  display: inline-block;
+  background: rgb(255, 232, 27);
+}
+/* header */
+
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header > section {
+  align-content: space-around;
+}
+
+header > div {
+  display: flex;
+}
+
+/* Button */
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  transition: 0.5s;
+  outline-color: transparent;
+}
+
+button:hover {
+  transform: scale(1.13);
+}
+
+button img {
+  height: 32px;
+  width: 32px;
+  margin-left: 10px;
+}
+
+@keyframes ani {
+  from {
+  }
+  to {
+    box-shadow: #2e2e2e63 1px 1px 2px 2px;
+  }
+}
+
+.head_left {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  width: 15vw;
+
+  padding-left: 3px;
+  padding-top: 3px;
+}
+
+.head_center {
+  width: 90vw;
+  justify-content: center;
+}
+
+.head_right {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  width: 15vw;
+
+  margin-top: 14px;
+  padding-left: 3px;
+}
+
+/* search window */
+
+#search_window_input {
+  padding-left: 12px;
+  width: 100%;
+  font-family: "Gowun Dodum";
+  font-size: 22px;
+
+  background: #fff;
+  border: 1px solid rgba(238, 234, 234, 0.1);
+  border-radius: 45px;
+
+  box-shadow: #2e2e2e63 1px 1px 1px 1px;
+  outline: none;
+}
+
+#search_window_input::placeholder {
+  color: rgba(140, 140, 140, 0.85);
+  font-family: "Gowun Dodum";
+  font-size: 22px;
+}
+
+#search_window_input:focus {
+  transform: scale(1.02);
+  animation-name: ani;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+#search_window_input:hover {
+  transform: scale(1.02);
+  transition-duration: 0.7s;
+}
+
+/* Recipe List */
+
+.RecipeList .ControlMenu {
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+
+  margin-top: 25px;
+  margin-left: 30px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+  box-shadow: #2e2e2e63 1px 1px 1px 1px;
+  font-size: 20px;
+}
+
+.ControlMenu {
+  font-family: "Gowun Dodum";
+  font-weight: bold;
+  outline: none;
+}
+
+/* Editor */
+
+.editor_main_top {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #ffffff79;
+}
+
+.editor_main input {
+  margin-top: 20px;
+  margin-left: 12px;
+
+  width: 60px;
+
+  border: none;
+  border-radius: 5px;
+  box-shadow: #2e2e2e63 1px 1px 1px 1px;
+
+  font-family: "Gowun Dodum";
+  text-align: center;
+  outline-color: transparent;
+}
+
+.editor_main input::placeholder {
+  color: rgba(140, 140, 140, 0.85);
+  font-family: "Gowun Dodum";
+  opacity: 70%;
+}
+
+/* Edit page img upload */
+
+.image_preview {
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+  object-fit: cover;
+
+  width: 360px;
+  height: 324px;
+
+  border-radius: 5px;
+  box-shadow: #2e2e2e63 1px 1px 1px 1px;
+}
+
+.image_div {
+  width: 300px;
+  height: 300px;
+
+  padding-left: 10px;
+
+  margin: 20px;
+}
+
+.image_preview_upload {
+  padding-left: 48%;
+}
+
+/* ingredient */
+
+.ingredient textarea {
+  font-family: "Gowun Dodum";
+  font-size: 22px;
+
+  width: 52vw;
+  height: 305px;
+
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 11%;
+
+  resize: none;
+  overflow-y: scroll;
+
+  padding: 10px;
+  padding-left: 15px;
+
+  border: none;
+  border-radius: 5px;
+
+  align-items: center;
+
+  box-shadow: #2e2e2e63 1px 1px 1px 1px;
+  outline-color: transparent;
+}
+
+.ingredient textarea::placeholder {
+  font-family: "Gowun Dodum";
+  font-size: 22px;
+  color: rgba(140, 140, 140, 0.85);
+}
+
+.main_recipe textarea {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-left: 8px;
+
+  font-family: "Gowun Dodum";
+  font-size: 22px;
+
+  padding: 10px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 5px;
+
+  width: 98%;
+  height: 400px;
+
+  resize: none;
+  overflow-y: scroll;
+
+  box-shadow: #2e2e2e63 1px 1px 1px 1px;
+  outline-color: transparent;
+}
+/* scrollbar */
+
+textarea::placeholder {
+  color: rgba(140, 140, 140, 0.85);
+  font-family: "Gowun Dodum";
+  font-size: 22px;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 30%;
+}
+
+::-webkit-scrollbar-thumb {
+  display: inline-block;
+  background: rgb(120, 111, 248);
+  border-radius: 5px;
+}
+
+/* maingpage recipefile */
+
+.RecipeItem {
+  display: inline-flex;
+  margin: 1.5%;
+
+  padding-left: 4px;
+}
+
+.recipe_img_preview {
+  margin-top: 10%;
+  margin-left: 18%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Gowun Dodum";
+  color: white;
+}
+
+/* preview Image */
+
+.preview_img {
+  margin-bottom: 5px;
+
+  object-fit: cover;
+
+  background-color: #ffd007;
+
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: #2e2e2e63 1px 1px 1px 1px;
+}
+
+.link {
+  margin-left: 9%;
+}
+
+.link_body {
+  overflow-y: scroll;
+  width: 200px;
+  height: 280px;
+}
+
+.link h3 {
+  color: white;
+  font-family: "Gowun Dodum";
+  text-shadow: 2px 2px 1px #2e2e2e63;
+}
+
+.cupang_link {
+  margin: 3%;
+  background-color: rgb(255, 89, 89);
+  color: white;
+
+  font-family: "Gowun Dodum";
+  border-radius: 5px;
+  box-shadow: #2e2e2e63 1px 1px 1px 1px;
+}
